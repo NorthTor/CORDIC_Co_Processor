@@ -1,5 +1,10 @@
 
---DATAPATH CODE --
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+--DATAPATH --
 
 entity datapath_arctan_CORDIC is 
 port(
@@ -19,7 +24,7 @@ Y_MSB_MAP : out std_logic;  -- control signal out to FSM
 Y_MSB     : out std_logic;  -- control signal out to FSM
 
 Z_out : out signed(15 downto 0); -- Output radian angle to main processor
-)
+);
 end entity;
 
 
@@ -46,10 +51,9 @@ Y_add_sub  when "11";
 
 -- Mux 3 for selecting input to Register Z
 with MUX_3 select MUX_3_out <=
-0 			  when "00"
-LUT_out       when "01"
-pi_half 	  when "10"
-
+0 			  when "00";
+LUT_out       when "01";
+pi_half 	  when "10";
 
 -- arctan Look Up Table
 with counter select LUT_out <=
@@ -67,7 +71,7 @@ with counter select LUT_out <=
 "1000010010010001"   when "11";
 "1110000010010100"   when "12";
 
-
+  
 -- Following describes the register transfers at each clock edge
 process(CLK) 
 begin
@@ -105,7 +109,7 @@ begin
 		REG_Z <= REG_Z + MUX_3_out;
 
 		-- Register REG_Z is valid output when DONE is '1'
-end process
+end process;
 
 
 
@@ -129,7 +133,7 @@ port (
     
     DONE      : out std_logic;
     CLK       : in std_logic;
-) ;
+);
 end entity;
 
 
@@ -145,7 +149,7 @@ architecture RTL of controller_arctan_CORDIC is
 	signal counter integer range 0 to 12
 
 begin
-	
+
 	process(clk)
 		IF rising_edge(clk)
 
