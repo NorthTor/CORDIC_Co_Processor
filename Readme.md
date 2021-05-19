@@ -8,9 +8,11 @@ RTL Datapath for implementation 1:
 
 
 RTL Controller for implementation 2 (focus on speed of computation):
+
 RTL Datapath for implementation 2:
 
 
 
 RTL Controller for implementation 3 (focus on precision):
+
 RTL Datapath for implementation 3:
