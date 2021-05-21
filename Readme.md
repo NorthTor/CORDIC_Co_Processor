@@ -1,7 +1,7 @@
 
-RTL Controller for implementation 1 (focus on minimizing area):
+RTL Controller and datapath for implementation 1 (cost-function parameter focus -> area):
 
-<img src="arctan_CORDIC_controller_RTL.PNG"  height="300"/>
+<img src="overview_Co_Processor.PNG"  height="300"/>
 
 RTL Datapath for implementation 1:
 
