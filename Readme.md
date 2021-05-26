@@ -1,18 +1,4 @@
 
-RTL Controller and datapath for implementation 1 (cost-function parameter focus -> area):
+From Algorithm to Hardware Architecture - Arcus Tangent function using the CORDIC Algorithm
 
-<img src="overview_Co_Processor.PNG"  height="300"/>
-
-RTL Datapath for implementation 1:
-
-
-
-RTL Controller for implementation 2 (focus on speed of computation):
-
-RTL Datapath for implementation 2:
-
-
-
-RTL Controller for implementation 3 (focus on precision):
-
-RTL Datapath for implementation 3:
+A semester project at University of Aalborg Denmark
